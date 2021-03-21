@@ -13,3 +13,12 @@ const printResult = true;
 const resultPhrase = "Result is: ";
 
 add(numA, numB, printResult, resultPhrase);
+
+const person = {
+  name: "Teja",
+  age: 25,
+  hobbies: ["Cricket", "Travel"],
+  role: [], // must have [ID, TITLE]
+};
+person.role.push("Cleaner"); //Only Title passed but TS didn't complain
+console.log(person);
