@@ -60,3 +60,11 @@ function combine(input1, input2) {
 }
 console.log("CombinedAges: ", combine(23, 34));
 console.log("CombinedNames: ", combine("Divya", "teja"));
+/**
+ * Literals
+ * - instead of just type, var of literal types take value too
+ */
+var someNumber;
+someNumber = 24; // Cannot be any number other than 24
+var someText;
+someText = "Hello"; // 'Hello' or 'Namaste' only

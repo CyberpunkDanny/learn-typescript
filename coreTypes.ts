@@ -58,10 +58,17 @@ person.gender = "Prefer not to say";
 console.log(person);
 
 /**
+ * Type Aliases
+ * - substitutes to actual union types
+ */
+type NumeroText = number | string;
+type Greeting = "Hello" | "Namaste";
+
+/**
  * Union
  * - allows multiple types of value for a var
  */
-function combine(input1: number | string, input2: number | string) {
+function combine(input1: NumeroText, input2: NumeroText) {
   if (typeof input1 === "number" && typeof input2 === "number") {
     return input1 + input2;
   } else {
@@ -71,3 +78,12 @@ function combine(input1: number | string, input2: number | string) {
 
 console.log("CombinedAges: ", combine(23, 34));
 console.log("CombinedNames: ", combine("Divya", "teja"));
+
+/**
+ * Literals
+ * - instead of just type, var of literal types take value too
+ */
+let someNumber: 24;
+someNumber = 24; // Cannot be any number other than 24
+let someText: Greeting;
+someText = "Hello"; // 'Hello' or 'Namaste' only
