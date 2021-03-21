@@ -14,11 +14,27 @@ const resultPhrase = "Result is: ";
 
 add(numA, numB, printResult, resultPhrase);
 
-const person = {
+enum Nation {
+  INDIA, //0 is default - can also use TEXT
+  USA, //1
+  UK, //2
+}
+
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string]; // a TUPLE type - an array of fixed length & fixed type
+  nationality: Nation;
+  gender: any; //Use 'any' only when input type is not definite
+} = {
   name: "Teja",
   age: 25,
   hobbies: ["Cricket", "Travel"],
-  role: [], // must have [ID, TITLE]
+  role: [3, "Teacher"],
+  nationality: Nation.INDIA,
+  gender: "F",
 };
-person.role.push("Cleaner"); //Only Title passed but TS didn't complain
+person.role = [2, "Principal"];
+person.gender = "Prefer not to say";
 console.log(person);
