@@ -87,3 +87,15 @@ let someNumber: 24;
 someNumber = 24; // Cannot be any number other than 24
 let someText: Greeting;
 someText = "Hello"; // 'Hello' or 'Namaste' only
+
+/**
+ * Function Type
+ */
+let combineValues: (a: NumeroText, b: NumeroText) => NumeroText;
+combineValues = combine;
+//  combineValues = add;
+/**
+ *  Above commented stmt throws an error as combineValues is of Function type which takes 2 params of type NumeroText
+ *  and returns value of type NumeroText
+ */
+console.log(combineValues("Hello", 786));

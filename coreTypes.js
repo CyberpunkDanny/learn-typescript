@@ -68,3 +68,14 @@ var someNumber;
 someNumber = 24; // Cannot be any number other than 24
 var someText;
 someText = "Hello"; // 'Hello' or 'Namaste' only
+/**
+ * Function Type
+ */
+var combineValues;
+combineValues = combine;
+//  combineValues = add;
+/**
+ *  Above commented stmt throws an error as combineValues is of Function type which takes 2 params of type NumeroText
+ *  and returns value of type NumeroText
+ */
+console.log(combineValues("Hello", 786));
